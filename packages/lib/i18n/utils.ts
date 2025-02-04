@@ -1817,6 +1817,7 @@ export const appLanguages = [
       "de-DE": "Englisch (US)",
       "pt-BR": "Inglês (EUA)",
       "fr-FR": "Anglais (États-Unis)",
+      "ko-KR": "영어 (미국)",
     },
   },
   {
@@ -1826,6 +1827,7 @@ export const appLanguages = [
       "de-DE": "Deutsch",
       "pt-BR": "Alemão",
       "fr-FR": "Allemand",
+      "ko-KR": "독일어",
     },
   },
   {
@@ -1835,6 +1837,7 @@ export const appLanguages = [
       "de-DE": "Portugiesisch (Brasilien)",
       "pt-BR": "Português (Brasil)",
       "fr-FR": "Portugais (Brésil)",
+      "ko-KR": "포르투갈어 (브라질)",
     },
   },
   {
@@ -1844,6 +1847,17 @@ export const appLanguages = [
       "de-DE": "Französisch",
       "pt-BR": "Francês",
       "fr-FR": "Français",
+      "ko-KR": "프랑스어",
+    },
+  },
+  {
+    code: "ko-KR",
+    label: {
+      "en-US": "Korean",
+      "de-DE": "Koreanisch",
+      "pt-BR": "Coreano",
+      "fr-FR": "Coréen",
+      "ko-KR": "한국어",
     },
   },
 ];
