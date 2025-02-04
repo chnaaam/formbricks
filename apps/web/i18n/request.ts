@@ -11,6 +11,7 @@ export default getRequestConfig(async () => {
   locale = locale ? locale : DEFAULT_LOCALE;
   // Lazy load the locale-specific messages
   const messages = await import(`@formbricks/lib/messages/${locale}.json`).then((module) => module.default);
+  // const messages = await import(`@formbricks/lib/messages/ko-KR.json`).then((module) => module.default);
 
   return {
     locale,

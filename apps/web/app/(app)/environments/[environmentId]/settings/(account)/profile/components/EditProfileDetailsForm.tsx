@@ -109,7 +109,10 @@ export const EditProfileDetailsForm = ({ user }: { user: TUser }) => {
                     {appLanguages.map((language) => (
                       <DropdownMenuItem
                         key={language.code}
-                        onClick={() => field.onChange(language.code)}
+                        onClick={() => {
+                          console.log("language", language.code);
+                          field.onChange(language.code);
+                        }}
                         className="min-h-8 cursor-pointer">
                         {language.label[field.value]}
                       </DropdownMenuItem>
