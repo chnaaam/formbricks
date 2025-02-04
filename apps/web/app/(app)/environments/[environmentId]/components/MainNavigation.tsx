@@ -252,10 +252,11 @@ export const MainNavigation = ({
                 <Link
                   href={mainNavigationLink}
                   className={cn(
-                    "flex items-center justify-center transition-opacity duration-100",
+                    "flex items-center justify-center text-center transition-opacity duration-100",
                     isTextVisible ? "opacity-0" : "opacity-100"
                   )}>
-                  <Image src={FBLogo} width={160} height={30} alt={t("environments.formbricks_logo")} />
+                  {/*<Image src={FBLogo} width={160} height={30} alt={t("environments.formbricks_logo")} />*/}
+                  <h1 className="text-2xl font-bold text-slate-900">KLXP</h1>
                 </Link>
               )}
               <Button
