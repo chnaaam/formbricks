@@ -1,6 +1,5 @@
 "use client";
 
-import { EnvironmentSwitch } from "@/app/(app)/environments/[environmentId]/components/EnvironmentSwitch";
 import { TTeamPermission } from "@/modules/ee/teams/project-teams/types/team";
 import { getTeamPermissionFlags } from "@/modules/ee/teams/utils/teams";
 import { Button } from "@/modules/ui/components/button";
@@ -23,7 +22,6 @@ interface TopControlButtonsProps {
 
 export const TopControlButtons = ({
   environment,
-  environments,
   isFormbricksCloud,
   membershipRole,
   projectPermission,
@@ -37,7 +35,7 @@ export const TopControlButtons = ({
 
   return (
     <div className="z-50 flex items-center space-x-2">
-      {!isBilling && <EnvironmentSwitch environment={environment} environments={environments} />}
+      {/*{!isBilling && <EnvironmentSwitch environment={environment} environments={environments} />}*/}
       {isFormbricksCloud && (
         <TooltipRenderer tooltipContent={t("common.share_feedback")}>
           <Button

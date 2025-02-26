@@ -158,30 +158,30 @@ export const MainNavigation = ({
         isActive: pathname?.includes("/surveys"),
         isHidden: false,
       },
-      {
-        href: `/environments/${environment.id}/contacts`,
-        name: t("common.contacts"),
-        icon: UserIcon,
-        isActive: pathname?.includes("/contacts") || pathname?.includes("/segments"),
-      },
-      {
-        name: t("common.actions"),
-        href: `/environments/${environment.id}/actions`,
-        icon: MousePointerClick,
-        isActive: pathname?.includes("/actions") || pathname?.includes("/actions"),
-      },
-      {
-        name: t("common.integrations"),
-        href: `/environments/${environment.id}/integrations`,
-        icon: BlocksIcon,
-        isActive: pathname?.includes("/integrations"),
-      },
-      {
-        name: t("common.configuration"),
-        href: `/environments/${environment.id}/project/general`,
-        icon: Cog,
-        isActive: pathname?.includes("/project"),
-      },
+      // {
+      //   href: `/environments/${environment.id}/contacts`,
+      //   name: t("common.contacts"),
+      //   icon: UserIcon,
+      //   isActive: pathname?.includes("/contacts") || pathname?.includes("/segments"),
+      // },
+      // {
+      //   name: t("common.actions"),
+      //   href: `/environments/${environment.id}/actions`,
+      //   icon: MousePointerClick,
+      //   isActive: pathname?.includes("/actions") || pathname?.includes("/actions"),
+      // },
+      // {
+      //   name: t("common.integrations"),
+      //   href: `/environments/${environment.id}/integrations`,
+      //   icon: BlocksIcon,
+      //   isActive: pathname?.includes("/integrations"),
+      // },
+      // {
+      //   name: t("common.configuration"),
+      //   href: `/environments/${environment.id}/project/general`,
+      //   icon: Cog,
+      //   isActive: pathname?.includes("/project"),
+      // },
     ],
     [t, environment.id, pathname]
   );
