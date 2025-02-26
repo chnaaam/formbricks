@@ -9,12 +9,17 @@ import {
   EMAIL_VERIFICATION_DISABLED,
   ENCRYPTION_KEY,
   ENTERPRISE_LICENSE_KEY,
+  NEXTAUTH_SECRET,
 } from "@formbricks/lib/constants";
 import { symmetricDecrypt, symmetricEncrypt } from "@formbricks/lib/crypto";
 import { verifyToken } from "@formbricks/lib/jwt";
 import { TUser } from "@formbricks/types/user";
 
+console.log("NEXTAUTH_SECRET:", NEXTAUTH_SECRET); // 디버깅용
+
 export const authOptions: NextAuthOptions = {
+  debug: false,
+  secret: NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
       id: "credentials",
@@ -168,16 +173,21 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async jwt({ token }) {
-      const existingUser = await getUserByEmail(token?.email!);
+      try {
+        const existingUser = await getUserByEmail(token?.email!);
 
-      if (!existingUser) {
+        if (!existingUser) {
+          return token;
+        }
+
+        return {
+          ...token,
+          profile: { id: existingUser.id },
+        };
+      } catch (error) {
+        console.error("JWT callback error:", error);
         return token;
       }
-
-      return {
-        ...token,
-        profile: { id: existingUser.id },
-      };
     },
     async session({ session, token }) {
       // @ts-expect-error
@@ -205,5 +215,12 @@ export const authOptions: NextAuthOptions = {
     signIn: "/auth/login",
     signOut: "/auth/logout",
     error: "/auth/login", // Error code passed in query string as ?error=
+  },
+  jwt: {
+    maxAge: 30 * 24 * 60 * 60, // 30일
+  },
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30일
   },
 };

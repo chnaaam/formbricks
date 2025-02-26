@@ -262,6 +262,10 @@ const nextConfig = {
   env: {
     NEXTAUTH_URL: process.env.WEBAPP_URL,
   },
+  devIndicators: {
+    buildActivityPosition: "bottom-right",
+    buildError: false,
+  },
 };
 
 // set custom cache handler

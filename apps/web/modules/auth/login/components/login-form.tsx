@@ -62,8 +62,8 @@ export const LoginForm = ({
 
   const form = useForm<TLoginForm>({
     defaultValues: {
-      email: searchParams?.get("email") || "",
-      password: "",
+      email: searchParams?.get("email") || "test@koreatech.ac.kr",
+      password: "Koreatech@2025",
       totpCode: "",
       backupCode: "",
     },
