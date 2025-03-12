@@ -1806,7 +1806,7 @@
         "zip_post_code": "우편 번호"
       },
       "results_unpublished_successfully": "결과가 성공적으로 게시되지 않았습니다.",
-      "search_by_survey_name": "조사 이름으로 검색하십시오.",
+      "search_by_survey_name": "설문지 이름으로 검색하십시오.",
       "summary": {
         "added_filter_for_responses_where_answer_to_question": "질문 {questionIdx}에 대한 답이 {filterComboBoxValue} - {filterValue}인 응답에 대한 필터가 추가되었습니다.",
         "added_filter_for_responses_where_answer_to_question_is_skipped": "질문 {questionIdx}의 답변이 건너뛰어진 경우에 대한 필터를 추가하였습니다.",
